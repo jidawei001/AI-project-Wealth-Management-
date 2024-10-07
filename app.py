@@ -11,3 +11,9 @@ app = Flask(__name__)
 user_name = ""
 flag = 1
 
+@app.route("/", methods=["GET", "POST"])
+def index():
+    global flag
+    flag = 1
+    return render_template("index.html")
+

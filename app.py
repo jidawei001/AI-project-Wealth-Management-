@@ -6,7 +6,7 @@ from textblob import TextBlob
 
 model = genai.GenerativeModel("gemini-1.5-flash")
 genai.configure(api_key="AIzaSyCluRjLkwn6IOe4f-dNTlusyuAkDUI7fQo")
-
+# test 
 app = Flask(__name__)
 user_name = ""
 flag = 1

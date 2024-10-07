@@ -3,77 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retirement Planning</title>
+    <title>Wealth Management Portal - Sentiment Analysis</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            color: #333;
         }
-        h2, h4 {
-            color: #555;
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #0056b3;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #004494;
+        }
+
+        /* Header */
+        h1 {
+            color: white;
             text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #0056b3;
         }
+
+        /* Container */
         .container {
-            max-width: 600px;
-            margin: 0 auto;
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
             background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
+        /* Section Headers */
+        .section-header {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        /* Form Styles */
         form {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            margin: 20px;
+            gap: 15px;
         }
-        input[type="submit"] {
+
+        label {
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
             padding: 10px;
-            margin: 10px;
             border-radius: 5px;
             border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
             font-size: 16px;
-            background-color: #4CAF50;
+            background-color: #0056b3;
             color: white;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
+
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #004494;
         }
-        @media (max-width: 600px) {
-            .container {
-                margin: 10px;
-                padding: 10px;
-            }
-            input[type="submit"] {
-                width: 100%;
-                margin: 5px 0;
-            }
+
+        /* Return Button */
+        #returnButton {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            background-color: #0056b3;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #returnButton:hover {
+            background-color: #004494;
         }
     </style>
 </head>
 <body>
+    <h1>Wealth Management Portal</h1>
+    <div class="navbar">
+        <a href="index.html">Dashboard</a>
+        <a href="goal_based.html">Goal-Based Planning</a>
+        <a href="portfolio.html">Portfolio Management</a>
+        <a href="investment.html">AI Investment Suggestions</a>
+    </div>
+    
     <div class="container">
-        <h2>Retirement Planning Calculator</h2>
-        <form action="/retirement" method="post">
-            <label for="age">Current Age:</label>
-            <input type="number" id="age" name="age" required>
-            
-            <label for="retirementAge">Planned Retirement Age:</label>
-            <input type="number" id="retirementAge" name="retirementAge" required>
-            
-            <label for="savings">Current Savings ($):</label>
-            <input type="number" id="savings" name="savings" required>
-            
-            <label for="monthlySavings">Monthly Savings ($):</label>
-            <input type="number" id="monthlySavings" name="monthlySavings" required>
-            
-            <input type="submit" value="Calculate">
+        <h2 class="section-header">Sentiment Analysis</h2>
+        <form action="/sentiment" method="post">
+            <label for="text">Enter Text:</label>
+            <textarea id="text" name="text" rows="4"></textarea>
+            <input type="submit" value="Analyze Sentiment">
         </form>
+        
+        <!-- Return Button -->
+        <button id="returnButton" onclick="window.location.href='index.html'">Return to Main Page</button>
     </div>
 </body>
 </html>

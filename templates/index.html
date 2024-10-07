@@ -23,9 +23,14 @@
     <section id="dashboard">
         <h2>Personalized Dashboard</h2>
         <div class="card">
-            <p><strong>Account Balance:</strong> $250,000</p>
-            <p><strong>Investment Growth:</strong> 12% YTD</p>
-            <p><strong>Goals Progress:</strong> 65%</p>
+            <label for="accountBalance">Account Balance:</label>
+            <input type="number" id="accountBalance" value="250000" readonly>
+            
+            <label for="investmentGrowth">Investment Growth (YTD):</label>
+            <input type="text" id="investmentGrowth" value="12%" readonly>
+            
+            <label for="goalsProgress">Goals Progress:</label>
+            <input type="text" id="goalsProgress" value="65%" readonly>
         </div>
     </section>
 
@@ -33,13 +38,21 @@
     <section id="goals">
         <h2>Goal-Based Financial Planning</h2>
         <div class="goal">
-            <p><strong>Retirement Goal:</strong> Save $1M by 2040</p>
-            <p><strong>Status:</strong> 40% Achieved</p>
+            <label for="retirementGoal">Retirement Goal:</label>
+            <input type="text" id="retirementGoal" value="Save $1M by 2040" readonly>
+            
+            <label for="retirementStatus">Status:</label>
+            <input type="text" id="retirementStatus" value="40% Achieved" readonly>
+            
             <button>View Strategy</button>
         </div>
         <div class="goal">
-            <p><strong>Home Purchase Goal:</strong> Save $500K by 2030</p>
-            <p><strong>Status:</strong> 70% Achieved</p>
+            <label for="homeGoal">Home Purchase Goal:</label>
+            <input type="text" id="homeGoal" value="Save $500K by 2030" readonly>
+            
+            <label for="homeStatus">Status:</label>
+            <input type="text" id="homeStatus" value="70% Achieved" readonly>
+            
             <button>View Strategy</button>
         </div>
     </section>
@@ -48,14 +61,16 @@
     <section id="portfolio">
         <h2>Portfolio Management & Analytics</h2>
         <div class="portfolio-summary">
-            <p><strong>Asset Allocation:</strong></p>
+            <label>Asset Allocation:</label>
             <ul>
                 <li>Stocks: 50%</li>
                 <li>Bonds: 30%</li>
                 <li>Real Estate: 10%</li>
                 <li>Cash: 10%</li>
             </ul>
-            <p><strong>Risk Level:</strong> Moderate</p>
+            <label>Risk Level:</label>
+            <input type="text" value="Moderate" readonly>
+            
             <button>View Analytics</button>
         </div>
     </section>
@@ -64,7 +79,7 @@
     <section id="ai-suggestions">
         <h2>AI-Powered Investment Suggestions</h2>
         <div class="suggestions">
-            <p><strong>Based on your profile, we recommend:</strong></p>
+            <label>Based on your profile, we recommend:</label>
             <ul>
                 <li>Increase bonds allocation to 40%</li>
                 <li>Consider investing in emerging markets</li>
